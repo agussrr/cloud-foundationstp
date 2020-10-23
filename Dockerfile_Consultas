@@ -1,0 +1,8 @@
+FROM python:3
+
+WORKDIR /Users/Agustin/Documents/Cloud 
+
+RUN pip install psycopg2
+RUN pip install kaggle
+RUN pip install pandas
+RUN pip install SQLAlchemy

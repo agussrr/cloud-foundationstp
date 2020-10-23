@@ -1,0 +1,8 @@
+psql -U postgres -d postgres -c "CREATE TABLE inventories (id INTEGER PRIMARY KEY, version VARCHAR, set_num VARCHAR)"
+psql -U postgres -d postgres -c "CREATE TABLE sets (set_num VARCHAR PRIMARY KEY, name VARCHAR, year INTEGER, theme_id INTEGER, num_parts INTEGER)"
+psql -U postgres -d postgres -c "CREATE TABLE themes (id INTEGER PRIMARY KEY, name VARCHAR, parent_id VARCHAR"
+psql -U postgres -d postgres -c "CREATE TABLE colors (id INTEGER PRIMARY KEY, name VARCHAR, rgb VARCHAR, is_trans VARCHAR)"
+psql -U postgres -d postgres -c "CREATE TABLE parts (part_num VARCHAR PRIMARY KEY, name VARCHAR, part_cat_id INTEGER)"
+psql -U postgres -d postgres -c "CREATE TABLE part_categories (id INTEGER PRIMARY KEY, name VARCHAR)"
+psql -U postgres -d postgres -c "CREATE TABLE inventory_sets (inventory_id VARCHAR PRIMARY KEY, set_num VARCHAR, quantity INTEGER)"
+psql -U postgres -d postgres -c "CREATE TABLE inventory_parts (inventory_id INTEGER, part_num VARCHAR, color_id INTEGER, quantity INTEGER , is_spare VARCHAR)"
