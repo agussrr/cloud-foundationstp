@@ -55,11 +55,11 @@ Los tres contenedores explicados anteriormente se corren de la siguiente manera:
 
 1. Buildeamos la imagen de los contenedores
 ```
-docker-compose -f dc.yml build
+docker-compose -f docker-compose1.yml build
 ```
 2. Ejecutamos la imagen
 ```
-docker-compose -f dc.yml up -d
+docker-compose -f docker-compose1.yml up -d
 ```
 ## Mejoras
 Para las proximas iteraciones considero que se podrian hacer las siguientes mejoras:
